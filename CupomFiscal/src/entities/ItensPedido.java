@@ -3,7 +3,11 @@ package entities;
 public class ItensPedido {
     private Integer quantidade;
     private Double valor;
+
     private Produto produto;
+
+    public ItensPedido() {
+    }
 
     public ItensPedido(Integer quantidade, Double valor, Produto produto) {
         this.quantidade = quantidade;
