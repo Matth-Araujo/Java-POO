@@ -1,11 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Cliente {
     private String nome;
     private String email;
     private Date datnasc;
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Cliente() {
     }
@@ -38,5 +41,10 @@ public class Cliente {
 
     public void setDatnasc(Date datnasc) {
         this.datnasc = datnasc;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " (" + sdf.format(datnasc) + ") - " + email;
     }
 }
